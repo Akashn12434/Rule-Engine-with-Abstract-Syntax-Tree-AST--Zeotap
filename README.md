@@ -54,15 +54,18 @@ Werkzeug (for API management)
 git clone https://github.com/Akashn12434/Rule-Engine-with-AST.git
 
 cd Rule-Engine-with-AST
-3. Create a Virtual Environment
+
+2. Create a Virtual Environment
 
 python -m venv venv
 
 
 venv\Scripts\activate      # For Windows
+
 3. Install Dependencies
 
 pip install -r requirements.txt
+
 4. Run the Application:
 
 python app.py  # Replace 'app.py' with the correct entry point if necessary
@@ -88,9 +91,9 @@ Method: POST
 Description: Merges a list of rules into a unified AST for evaluation.
 
 2. Data Structure
+
 The rule engine utilizes a Node class to construct the AST. Here’s a basic example of the Node class:
 
-python
 
 class Node:
     def __init__(self, node_type, left=None, right=None, value=None):
@@ -98,9 +101,11 @@ class Node:
         self.left = left       # Left child node reference
         self.right = right     # Right child node reference
         self.value = value     # Value for operand nodes (optional)
+        
 This class enables the creation of nodes representing rules in the form of an AST, facilitating dynamic rule manipulation.
 
 3. Data Storage
+   
 SQLite is used as the database for storing rules and application metadata. Here’s the table schema:
 
 sql
