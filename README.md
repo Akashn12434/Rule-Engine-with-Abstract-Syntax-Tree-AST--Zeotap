@@ -97,9 +97,13 @@ The rule engine utilizes a Node class to construct the AST. Here’s a basic exa
 
 class Node:
     def __init__(self, node_type, left=None, right=None, value=None):
+        
         self.type = node_type  # 'operator' or 'operand'
+        
         self.left = left       # Left child node reference
+        
         self.right = right     # Right child node reference
+        
         self.value = value     # Value for operand nodes (optional)
         
 This class enables the creation of nodes representing rules in the form of an AST, facilitating dynamic rule manipulation.
@@ -112,16 +116,23 @@ sql
 
 CREATE TABLE rules (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
+    
     rule_string TEXT NOT NULL,
+    
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+    
 );
+
 Sample rules can be inserted like this:
 
 sql
 
 INSERT INTO rules (rule_string) VALUES
+
     ("((age > 30 AND department = 'Sales') OR (age < 25 AND department = 'Marketing')) AND (salary > 50000 OR experience > 5)"),
+    
     ("((age > 30 AND department = 'Marketing')) AND (salary > 20000 OR experience > 5)");
+    
 
 4. API Design
 The following key API functions are available:
