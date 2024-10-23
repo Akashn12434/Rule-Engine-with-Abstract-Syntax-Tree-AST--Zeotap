@@ -138,6 +138,7 @@ INSERT INTO rules (rule_string) VALUES
     
 
 4. API Design
+   
 The following key API functions are available:
 
 1. Create Rule
@@ -169,7 +170,8 @@ Rule Editing:Enable users to modify existing rules dynamically.
 
 User-Defined Functions:Plan to support more complex rule conditions with user-defined functions.
 
-7. Non-Functional Requirements
+### 7. Non-Functional Requirements
+
 Security:Implement SQL injection prevention measures and input validation.
 
 Performance:Enhance rule evaluation efficiency through caching or optimization strategies.
