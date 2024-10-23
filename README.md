@@ -23,6 +23,7 @@ Non-Functional Requirements
 
 
 1. Project Overview
+
 This rule engine empowers users to dynamically define and update rules using an AST structure.
 ###  Key features of the application include:
 
@@ -65,16 +66,25 @@ pip install -r requirements.txt
 4. Run the Application:
 
 python app.py  # Replace 'app.py' with the correct entry point if necessary
+
 The application will be available at: http://127.0.0.1:5000.
+
 
 ### Rule Engine API Endpoints
 Create Rule
+
 Endpoint: /create_rule
+
 Method: POST
+
 Description: Accepts a rule string and returns its AST representation.
+
 Combine Rules
+
 Endpoint: /combine_rules
+
 Method: POST
+
 Description: Merges a list of rules into a unified AST for evaluation.
 
 2. Data Structure
