@@ -96,6 +96,7 @@ The rule engine utilizes a Node class to construct the AST. Hereâ€™s a basic exa
 
 
 class Node:
+
     def __init__(self, node_type, left=None, right=None, value=None):
         
         self.type = node_type  # 'operator' or 'operand'
@@ -114,7 +115,9 @@ SQLite is used as the database for storing rules and application metadata. Hereâ
 
 sql
 
+
 CREATE TABLE rules (
+    
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     
     rule_string TEXT NOT NULL,
@@ -148,40 +151,30 @@ Function: evaluate_rule(json_data)
 Description: Evaluates the AST using user-provided attribute data, returning True or False based on eligibility.
 
 ### 5. Test Cases
-Creating Rules:
+Creating Rules:Test the creation of individual rules with create_rule and verify the AST structure.
 
-Test the creation of individual rules with create_rule and verify the AST structure.
-Combining Rules:
+Combining Rules:Test combining multiple rules using combine_rules and ensure the AST reflects the merged logic.
 
-Test combining multiple rules using combine_rules and ensure the AST reflects the merged logic.
-Evaluating Rules:
+Evaluating Rules:Provide sample user data in JSON format and test rule evaluation using evaluate_rule.
 
-Provide sample user data in JSON format and test rule evaluation using evaluate_rule.
-Exploring Additional Scenarios:
+Exploring Additional Scenarios:Experiment with various rule combinations and test evaluation accuracy.
 
-Experiment with various rule combinations and test evaluation accuracy.
 ### 6. Bonus Features
-Error Handling:
 
-Incorporate mechanisms to handle invalid rule strings or data formats.
-Validations:
+Error Handling: Incorporate mechanisms to handle invalid rule strings or data formats.
 
-Ensure attribute data is validated against a predefined schema or catalog.
-Rule Editing:
+Validations:Ensure attribute data is validated against a predefined schema or catalog.
 
-Enable users to modify existing rules dynamically.
-User-Defined Functions:
+Rule Editing:Enable users to modify existing rules dynamically.
 
-Plan to support more complex rule conditions with user-defined functions.
+User-Defined Functions:Plan to support more complex rule conditions with user-defined functions.
+
 7. Non-Functional Requirements
-Security:
+Security:Implement SQL injection prevention measures and input validation.
 
-Implement SQL injection prevention measures and input validation.
-Performance:
+Performance:Enhance rule evaluation efficiency through caching or optimization strategies.
 
-Enhance rule evaluation efficiency through caching or optimization strategies.
-Scalability:
+Scalability: Design the system to scale with increasing rule evaluations and data loads.
 
-Design the system to scale with increasing rule evaluations and data loads.
 
 
