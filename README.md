@@ -4,13 +4,21 @@ The aim of this project is to build a three-tier rule engine application with a 
 
 ### Table of Contents
 Objective
+
 How to Run the Application
+
 Data Structure
+
 Data Storage
+
 API Design
+
 Test Cases
+
 Bonus Features
+
 Non-Functional Requirements
+
 
 
 
@@ -19,23 +27,33 @@ This rule engine empowers users to dynamically define and update rules using an 
 ###  Key features of the application include:
 
 Creation and storage of conditional rules based on user attributes.
+
 Merging multiple rules into a single AST.
+
 Evaluation of user eligibility by processing the rules against provided data.
+
 Storage of rules and metadata in an SQL database.
+
 
 ### Technologies Used
 Backend Framework: Flask (Python)
+
 Frontend: HTML, CSS, JavaScript (if required)
+
 Database: SQLite with SQLAlchemy ORM
+
 Additional Libraries:
+
 SQLAlchemy (for ORM)
+
 Werkzeug (for API management)
 
 ### Setup and Installation
 1. Clone the Repository
 git clone https://github.com/Akashn12434/Rule-Engine-with-AST.git
+
 cd Rule-Engine-with-AST
-2. Create a Virtual Environment
+3. Create a Virtual Environment
 
 python -m venv venv
 
