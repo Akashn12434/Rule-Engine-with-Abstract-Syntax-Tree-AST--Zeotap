@@ -38,7 +38,8 @@ cd Rule-Engine-with-AST
 2. Create a Virtual Environment
 
 python -m venv venv
-source venv/bin/activate  # For Linux/Mac
+
+
 venv\Scripts\activate      # For Windows
 3. Install Dependencies
 
